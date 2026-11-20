@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Shelf-Life Rotation Tracker · Prep Chart</title>
-<meta name="description" content="A private rotation tracker for emergency supplies: add items with expiry dates, see what has expired or expires soon. Data stays in your browser; nothing is uploaded.">
+<title>Shelf-Life Tracker for Stored Supplies · Prep Chart</title>
+<meta name="description" content="A private tracker for emergency supplies. Add items and expiry dates, then see what has expired or expires soon. Data stays in your browser.">
 <link rel="canonical" href="https://bugoutchart.pages.dev/shelf-life">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Prep Chart">
-<meta property="og:title" content="Shelf-Life Rotation Tracker · Prep Chart">
-<meta property="og:description" content="A private rotation tracker for emergency supplies: add items with expiry dates, see what has expired or expires soon. Data stays in your browser; nothing is uploaded.">
+<meta property="og:title" content="Shelf-Life Tracker for Stored Supplies · Prep Chart">
+<meta property="og:description" content="A private tracker for emergency supplies. Add items and expiry dates, then see what has expired or expires soon. Data stays in your browser.">
 <meta property="og:url" content="https://bugoutchart.pages.dev/shelf-life">
 <meta property="og:image" content="https://bugoutchart.pages.dev/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Shelf-Life Rotation Tracker · Prep Chart">
-<meta name="twitter:description" content="A private rotation tracker for emergency supplies: add items with expiry dates, see what has expired or expires soon. Data stays in your browser; nothing is uploaded.">
+<meta name="twitter:title" content="Shelf-Life Tracker for Stored Supplies · Prep Chart">
+<meta name="twitter:description" content="A private tracker for emergency supplies. Add items and expiry dates, then see what has expired or expires soon. Data stays in your browser.">
 <meta name="twitter:image" content="https://bugoutchart.pages.dev/og-image.png">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -57,6 +57,26 @@ th{position:sticky;top:0;white-space:nowrap}
 .tag{font-size:12px;font-weight:600;padding:2px 8px}
 .wrap{--w:1000px}</style>
 <link rel="stylesheet" href="theme.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bugoutchart.pages.dev/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Shelf-Life Tracker",
+      "item": "https://bugoutchart.pages.dev/shelf-life"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="back" href="index.html">← All charts</a>
@@ -110,6 +130,8 @@ $("exp").addEventListener("click",()=>{const a=document.createElement("a");a.hre
 $("clr").addEventListener("click",()=>{if(items.length&&confirm("Remove every item from this browser's list?")){items=[];save();render()}});
 render();
 </script>
+
+<section class="panel prose related" aria-label="Related pages"><h2>Related</h2><p class="links"><a href="water-food.html">Water and food</a> <a href="bag-builder.html">Bag builder</a></p></section>
 
 <p class="kofi">Free and ad-free. If this site helped you, <a href="https://ko-fi.com/marcustravis" target="_blank" rel="noopener">buy me a coffee →</a></p>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "749482d892b4482e83d6f3dd7850b185"}'></script>

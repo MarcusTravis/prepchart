@@ -55,8 +55,13 @@ for (const f of files) {
     }
   }
 }
-for (const need of ["robots.txt", "_headers", "SOURCES.md", "CHANGELOG.md", "README.md", "favicon.svg", "favicon.ico", "apple-touch-icon.png", "og-image.png", "scroll-hint.js", "theme.css"])
+for (const need of ["robots.txt", "_headers", "SOURCES.md", "CHANGELOG.md", "README.md", "favicon.svg", "favicon.ico", "apple-touch-icon.png", "og-image.png", "scroll-hint.js", "theme.css", "llms.txt"])
   if (!fs.existsSync(path.join(ROOT, need))) bad(need, "missing");
 if (!fs.readFileSync(path.join(ROOT, "robots.txt"), "utf8").includes(`Sitemap: ${HOST}/sitemap.xml`)) bad("robots.txt", "sitemap line");
+const robotsTxt = fs.readFileSync(path.join(ROOT, "robots.txt"), "utf8");
+for (const bot of ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Bingbot"])
+  if (!robotsTxt.includes(`User-agent: ${bot}`)) bad("robots.txt", "missing Allow for " + bot);
+if (!sitemap.includes("<lastmod>")) bad("sitemap.xml", "missing lastmod");
+
 if (problems.length) { console.error(problems.map(p => "✗ " + p).join("\n")); console.error(`\n${problems.length} problem(s)`); process.exit(1); }
 console.log(`OK: ${files.length} pages, ${rowCount} chart rows checked`);

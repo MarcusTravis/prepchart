@@ -21,5 +21,5 @@ Never invent a number: blank beats a guess. Editorial estimates (for example bag
 
 ## Files
 - `theme.css`, `scroll-hint.js`: shared styling and the wide-table scroll cue.
-- `sitemap.xml`, `robots.txt`, `_headers`: SEO and canonical link header.
+- `sitemap.xml`, `robots.txt`, `_headers`, `llms.txt`: SEO, canonical link header, and a plain-text page list.
 - `tools/check-consistency.mjs`: sanity checks.

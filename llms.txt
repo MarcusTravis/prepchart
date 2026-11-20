@@ -1,0 +1,36 @@
+# Prep Chart
+
+> Free, ad-free emergency preparedness charts, calculators and plain-words guides. Official and well-known sources are summarized in our own words and linked. The live site is https://bugoutchart.pages.dev/
+
+Prep Chart compares published emergency kit lists, offers a bag-weight calculator, and charts water, food, backup power and gear. Scenario guides cover power outages, hurricanes, wildfires, winter storms and floods. The site does not cover firearms; those charts live at https://ammochart.net. General information only; not professional or medical advice. Follow local emergency officials.
+
+## Pages
+
+- [Home](https://bugoutchart.pages.dev/): Home hub for the charts, calculators and guides.
+- [Bug-Out Bag Lists](https://bugoutchart.pages.dev/bug-out-bags): Comparison of 14 published bug-out bag and 72-hour kit lists.
+- [Bag Builder](https://bugoutchart.pages.dev/bag-builder): Checklist and editorial weight calculator based on Ready.gov kit categories.
+- [Water & Food](https://bugoutchart.pages.dev/water-food): Water storage calculator, plus charts of filters, purifiers and emergency foods.
+- [Backup Power](https://bugoutchart.pages.dev/power): Generators, power stations and solar panels, with carbon monoxide and fuel safety.
+- [Gear Charts](https://bugoutchart.pages.dev/gear): Hub for six emergency gear charts.
+- [Knives & Tools](https://bugoutchart.pages.dev/knives): Chart of knives and multi-tools for emergency kits.
+- [Fire Starters](https://bugoutchart.pages.dev/fire): Chart of lighters, matches, ferro rods and tinder.
+- [Shelters](https://bugoutchart.pages.dev/shelters): Chart of tarps, bivies, space blankets and tents.
+- [Radios](https://bugoutchart.pages.dev/radios): Chart of weather radios, family radios, ham handhelds and satellite messengers.
+- [First Aid Kits](https://bugoutchart.pages.dev/first-aid): Chart of ready-made and DIY first aid kits, with a training reminder.
+- [Headlamps](https://bugoutchart.pages.dev/headlamps): Chart of headlamps by output, power source and water rating.
+- [Scenarios](https://bugoutchart.pages.dev/scenarios): Hub for hazard guides plus get-home and vehicle kits.
+- [Power Outage](https://bugoutchart.pages.dev/blackout): Plain-words power outage guide, including generator safety.
+- [Hurricane](https://bugoutchart.pages.dev/hurricane): Plain-words hurricane guide with official links.
+- [Wildfire](https://bugoutchart.pages.dev/wildfire): Plain-words wildfire guide: leave early and protect your lungs from smoke.
+- [Winter Storm](https://bugoutchart.pages.dev/winter-storm): Plain-words winter storm guide, including carbon monoxide and vehicle stranding.
+- [Flood](https://bugoutchart.pages.dev/flood): Plain-words flood guide, including Turn Around, Don't Drown.
+- [Get-Home Bag](https://bugoutchart.pages.dev/get-home): A light kit for walking home if normal transport stops.
+- [Vehicle Kit](https://bugoutchart.pages.dev/vehicle-kit): What to keep in the car for breakdowns and storms.
+- [Shelf-Life Tracker](https://bugoutchart.pages.dev/shelf-life): A private, in-browser expiry tracker for stored supplies.
+- [Prep Styles](https://bugoutchart.pages.dev/styles): A neutral description of four common preparedness styles.
+- [Site Updates](https://bugoutchart.pages.dev/updates): What changed on the site, newest first.
+
+## Optional
+
+- [sitemap.xml](https://bugoutchart.pages.dev/sitemap.xml): machine-readable list of pages.
+- [SOURCES.md](https://github.com/MarcusTravis/prepchart/blob/main/SOURCES.md): per-row sources and check dates.
