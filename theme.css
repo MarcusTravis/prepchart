@@ -1,0 +1,150 @@
+/* Apple-style theme: the look and feel of apple.com/iphone.
+   Light gray page, big borderless white cards with large rounded corners,
+   SF Pro type, near-black text, Apple blue links, round gray arrow buttons.
+   Loaded after each page's own styles, so this one file restyles the whole
+   site. Pages set data-theme="light" on <html>, which turns off the old
+   dark-mode rules. */
+:root:root:root{
+  color-scheme:light;
+  --bg:#f5f5f7; --surface:#ffffff; --fg:#1d1d1f; --muted:#6e6e73; --line:#d2d2d7;
+  --accent:#0066cc; --accent-soft:#ffffff; --olive:#6e6e73; --bar-bg:#e8e8ed; --grid:#d2d2d7;
+  --ink:#1d1d1f; --hov:#1d1d1f; --new:#b64400; --red:#e30000; --btn:#e8e8ed; --btn-h:#dcdce1;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Inter,"Segoe UI",Roboto,Arial,sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Inter,"Segoe UI",Roboto,Arial,sans-serif;
+}
+body{background:var(--bg);color:var(--fg);font-size:17px;line-height:1.47;letter-spacing:-.022em;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{padding-top:56px}
+
+/* Type: big, tight, semibold, no all-caps anywhere */
+h1,h2,h3,.nm,.cart,.sec,.dia .in,.hero .hl2,.eyebrow,.cnt,.cat,.flag,.badge,th,.tag,.hsg span{
+  text-transform:none!important;font-family:var(--display)}
+h1{font-weight:600;font-size:clamp(40px,6vw,64px);line-height:1.06;letter-spacing:-.015em;margin-top:4px}
+h2,h3{letter-spacing:-.01em}
+.eyebrow{color:var(--muted);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.lede{color:var(--muted);font-size:21px;line-height:1.38;letter-spacing:.011em;font-weight:400;max-width:58ch}
+.grp{margin-top:56px}
+.grp h2{font-weight:600;font-size:clamp(26px,3.4vw,32px);letter-spacing:-.005em;border:0;padding:0;margin:0 0 22px}
+
+/* Cards: white, borderless, very rounded, lift on hover like apple.com */
+.grid{gap:22px}
+.card,.tip{position:relative;border:0!important;border-radius:28px;background:var(--surface);
+  box-shadow:none!important;transition:transform .3s cubic-bezier(0,0,.5,1),box-shadow .3s cubic-bezier(0,0,.5,1)}
+.card{padding:30px 30px 26px;gap:8px}
+.tip{padding:30px 30px 28px}
+a.card:hover,a.tip:hover{transform:scale(1.015);box-shadow:2px 4px 16px rgba(0,0,0,.10)!important}
+.cnt{color:var(--fg);font-size:14px;font-weight:600;letter-spacing:-.01em}
+.nm{font-weight:600;font-size:28px;line-height:1.14;letter-spacing:.004em}
+.ds{color:var(--fg);font-size:16px;line-height:1.5}
+
+/* "Open chart" becomes the round gray arrow button in the card's corner */
+.card .go,.card.feature .go{font-size:0!important;align-self:flex-end;margin-top:18px;width:36px;height:36px;border-radius:50%;
+  background:var(--btn);font-size:0;color:transparent;display:grid;place-items:center;transition:background .2s}
+.card .go::after{content:"\203A";font:500 27px/1 var(--body);color:var(--fg);margin:-4px 0 0 2px}
+.card:hover .go{background:var(--btn-h)}
+
+/* "Start here" labels: Apple's small orange "New"-style text, no pill */
+.card.feature{border:0;background:var(--surface)}
+.card.feature .cnt{color:var(--fg)}
+.badge{background:none;color:var(--new);padding:0;border-radius:0;font-size:14px;font-weight:600;letter-spacing:-.01em;margin:0}
+
+/* Filter chips */
+.chip{border:0;border-radius:999px;background:var(--btn);color:var(--fg);font:500 14px var(--body);padding:9px 16px;letter-spacing:-.01em}
+.chip:hover{background:var(--btn-h)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+.count{color:var(--muted);font-size:14px}
+
+/* Tables: white rounded panel, hairline rows, quiet headers */
+.table-box{border:0;border-radius:28px;background:var(--surface);box-shadow:none}
+th{background:var(--surface)!important;color:var(--muted);font-size:13px;font-weight:600;letter-spacing:-.01em;border-bottom:1px solid var(--line)}
+th,td{border-color:#e8e8ed}
+.cart{font-weight:600;letter-spacing:-.01em}
+.num{font-weight:600}
+.tag{border-radius:999px;background:var(--bg);color:var(--muted)}
+.bar{border-radius:999px;background:var(--bar-bg)}
+.bar span{border-radius:999px;background:var(--fg)}
+
+/* Tips: no colored outlines; tiers shown with Apple-style labels */
+.tip.must,.tip.should{border:0}
+.cat{color:var(--muted);font-size:14px;font-weight:600;letter-spacing:-.01em}
+.flag{background:none!important;padding:0;border-radius:0;font-size:14px;font-weight:600;letter-spacing:-.01em}
+.tip.must .flag{color:var(--red)}
+.tip.should .flag{color:var(--new)}
+.tip h2{font-weight:600;font-size:24px;line-height:1.17;letter-spacing:.009em}
+.more{color:var(--accent);font-weight:400;font-size:17px}
+a.tip:hover .more{color:var(--accent);text-decoration:underline}
+
+/* Scroll hint, MPBR warning and danger boxes (body prefix beats scroll-hint.js's own styles) */
+body .sh-hint{border:0;border-radius:18px;background:var(--surface)}
+body .sh-btn{border:0;border-radius:50%;width:36px;height:36px;background:var(--btn);color:var(--fg)}
+body .sh-btn:hover:not(:disabled){background:var(--btn-h);color:var(--fg)}
+body .sh-arrow{color:var(--accent)}
+body .sh-warn{border:0;border-radius:18px;background:var(--surface);max-width:none}
+body .sh-warn-icon,body .sh-warn strong,body .sh-thwarn{color:var(--new)}
+body .sh-rail{border:0;background:transparent}
+.danger{--danger:var(--red);border:0!important;border-radius:28px;background:var(--surface)!important}
+
+/* Other content boxes on the tip pages get the same borderless rounded look */
+.grp-card,.gm,.hs,.pair,.rv,.story,.pro,.hero{border:0!important;border-radius:28px!important;background:var(--surface);box-shadow:none!important}
+.grp-card,.gm,.hs,.pair,.rv{padding:26px 28px}
+.dia .in{color:var(--fg);font-weight:600}
+.why>div{border:0!important;border-radius:22px!important;background:var(--surface);padding:22px 24px!important}
+.gm h2,.hs h2,.rv h2{color:var(--fg);font-weight:600}
+body *{text-transform:none!important}
+
+/* Drawings: neutral steel gray */
+.hero .st,.dg .st,.viz .st{fill:#8e8e93}
+.hero .bf,.dg .bf,.viz .bf{fill:#48484a}
+
+/* Ko-fi tip line at the bottom of every page */
+.kofi{max-width:1200px;margin:48px auto 36px;padding:0 24px;text-align:center;color:var(--muted);font-size:14px}
+.kofi a{color:var(--accent);text-decoration:none}
+.kofi a:hover{text-decoration:underline}
+
+/* "Data last checked" line under each chart title; bump the date in one spot per chart */
+.checked{margin:4px 0 0;color:var(--muted);font-size:14px}
+.checked a{color:var(--accent);text-decoration:none}
+.checked a:hover{text-decoration:underline}
+.kofi.updated{margin-bottom:-24px}
+
+/* ---- Prep Chart additions (same Apple tokens; no new colors beyond a quiet green accent for checklists) ---- */
+.caption{margin:12px 4px 0;color:var(--muted);font-size:13px;line-height:1.45;max-width:100ch}
+.chart{margin-top:40px}
+.chart:first-of-type{margin-top:24px}
+.chart>h2{font-weight:600;font-size:clamp(24px,3vw,30px);margin:0 0 6px;letter-spacing:-.005em}
+.chart>.lede{font-size:17px;margin:0 0 6px}
+.safety{margin:18px 0;padding:20px 24px;border-radius:22px;background:var(--surface);border-left:6px solid var(--new);font-size:15px;line-height:1.5;max-width:90ch}
+.safety strong{display:block;margin-bottom:6px;font-size:17px;color:var(--new)}
+.safety ul{margin:8px 0 0;padding-left:20px}
+.safety li{margin:4px 0}
+.panel{background:var(--surface);border-radius:28px;padding:28px;margin:20px 0}
+.panel h2{margin:0 0 6px;font-weight:600;font-size:26px}
+.panel h3{margin:22px 0 6px;font-weight:600;font-size:19px}
+.prose{max-width:75ch}
+.prose p,.prose li{font-size:17px}
+.prose h2{font-weight:600;font-size:26px;margin:36px 0 8px}
+.prose ul{padding-left:22px}
+.prose li{margin:6px 0}
+.src-list{font-size:15px}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:16px 0}
+.field label{display:block;font-size:14px;font-weight:600;margin-bottom:6px;color:var(--muted)}
+.field select,.field input{width:100%;font:400 17px var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg)}
+.field select:focus-visible,.field input:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn{font:500 15px var(--body);border:0;border-radius:999px;padding:10px 18px;background:var(--btn);color:var(--fg);cursor:pointer}
+.btn:hover{background:var(--btn-h)}
+.btn.primary{background:var(--accent);color:#fff}
+.result{margin-top:18px;padding:18px 22px;border-radius:20px;background:var(--bg)}
+.result .big{font-family:var(--display);font-weight:600;font-size:34px;line-height:1.1}
+.result .sub{display:block;font-size:14px;color:var(--muted)}
+.checklist{list-style:none;padding:0;margin:6px 0 0}
+.checklist li{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px solid #e8e8ed;font-size:16px}
+.checklist li:last-child{border-bottom:0}
+.checklist .w{margin-left:auto;white-space:nowrap;color:var(--muted);font-size:14px}
+.checklist .b{font-size:12px;color:var(--muted);border-radius:999px;background:var(--bg);padding:1px 8px;white-space:nowrap}
+.checklist .qn{color:var(--muted);font-size:14px}
+.status-soon{color:var(--new);font-weight:600}
+.status-bad{color:var(--red);font-weight:600}
+.status-ok{color:var(--muted)}
+.links a{display:inline-block;margin:2px 14px 2px 0}
+.extra-note{color:var(--muted);font-size:14px;max-width:80ch}
+@media print{.back,.chips,.kofi,.btn{display:none!important}}

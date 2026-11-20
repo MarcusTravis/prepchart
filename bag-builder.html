@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bag Builder: Emergency Bag Checklist and Weight Calculator · Prep Chart</title>
+<meta name="description" content="Pick a scenario, group size, climate and pets to get a checklist of emergency bag categories and items with rough estimated weight. Based on Ready.gov kit categories. Estimates only.">
+<link rel="canonical" href="https://prepchart.pages.dev/bag-builder">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prep Chart">
+<meta property="og:title" content="Bag Builder: Emergency Bag Checklist and Weight Calculator · Prep Chart">
+<meta property="og:description" content="Pick a scenario, group size, climate and pets to get a checklist of emergency bag categories and items with rough estimated weight. Based on Ready.gov kit categories. Estimates only.">
+<meta property="og:url" content="https://prepchart.pages.dev/bag-builder">
+<meta property="og:image" content="https://prepchart.pages.dev/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bag Builder: Emergency Bag Checklist and Weight Calculator · Prep Chart">
+<meta name="twitter:description" content="Pick a scenario, group size, climate and pets to get a checklist of emergency bag categories and items with rough estimated weight. Based on Ready.gov kit categories. Estimates only.">
+<meta name="twitter:image" content="https://prepchart.pages.dev/og-image.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}*,*::before,*::after{box-sizing:border-box}</style>
+<style>
+:root{--bg:#f5f5f7;--surface:#fff;--fg:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--accent:#0066cc;--accent-soft:#fff;--bar-bg:#e8e8ed;
+ --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",system-ui,"Segoe UI",sans-serif;
+ --body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,"Segoe UI",sans-serif}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.47}
+.wrap{max-width:var(--w,1100px);margin:0 auto;padding-block:32px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.eyebrow{font-size:14px;font-weight:600;color:var(--muted)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,54px);line-height:1.06;margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.back{display:inline-block;margin:16px 0 0 max(16px,env(safe-area-inset-left,0px));font:600 14px var(--body);color:var(--accent);text-decoration:none}
+.back+.back{margin-left:18px}
+.grp{margin-top:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{display:flex;flex-direction:column;gap:6px;padding:16px 18px;background:var(--surface);color:inherit;text-decoration:none;min-width:0}
+.ds{flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
+.chip{cursor:pointer}
+.chip:focus-visible,.th-btn:focus-visible,.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.table-box{overflow-x:auto;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:var(--tw,1300px);font-variant-numeric:tabular-nums;font-size:15px}
+td:first-child{min-width:200px}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+th{position:sticky;top:0;white-space:nowrap}
+.th-btn{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+.th-btn::after{content:"↕";opacity:.4;font-size:11px}
+.th-btn[data-dir="asc"]::after{content:"↑";opacity:1;color:var(--accent)}
+.th-btn[data-dir="desc"]::after{content:"↓";opacity:1;color:var(--accent)}
+.cart{display:block;font-size:18px;line-height:1.2}
+.sub{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.num{white-space:nowrap}
+.wide{min-width:280px;max-width:44ch}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.tag{font-size:12px;font-weight:600;padding:2px 8px}
+.wrap{--w:1000px}</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<a class="back" href="index.html">← All charts</a>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Bags · calculator</span>
+    <h1>Bag Builder</h1>
+    <p class="lede">Choose a scenario, how many people, your climate and pets. You get a checklist built on the Ready.gov kit categories, with a rough weight for each line. It runs in your browser; nothing is saved or sent.</p>
+    <p class="checked">Weights are editorial estimates, not measurements · <a href="bug-out-bags.html">Compare the published lists</a></p>
+  </header>
+  <aside class="safety" role="note"><strong>Estimates only</strong>Weights are rounded editorial guesses for typical gear. Your actual gear will be lighter or heavier; weigh your real bag. Quantities are a starting point, not a guarantee that you have enough for your family's medical, dietary or accessibility needs.</aside>
+<div class="panel">
+  <div class="form">
+    <div class="field"><label for="sc">Scenario</label><select id="sc"><option value="72">72-hour bag</option><option value="wk">One-week bag</option><option value="home">Get-home bag (about a day)</option></select></div>
+    <div class="field"><label for="pp">People (1–8)</label><input id="pp" type="number" min="1" max="8" value="2"></div>
+    <div class="field"><label for="cl">Climate</label><select id="cl"><option value="temperate">Temperate</option><option value="hot">Hot</option><option value="cold">Cold</option></select></div>
+    <div class="field"><label for="pets">Pets (0–4)</label><input id="pets" type="number" min="0" max="4" value="0"></div>
+  </div>
+  <label><input type="checkbox" id="full"> Carry the full Ready.gov water amount (1 gallon per person per day) instead of a smaller amount plus a filter</label>
+  <p class="extra-note">Carrying a full gallon per person per day gets heavy fast: a gallon is about 8.3 lb. Most walk-out bags carry a liter or two plus a way to treat more.</p>
+  <div class="result" aria-live="polite"><div class="big" id="total"></div><span class="sub" id="perp"></span></div>
+  <div id="list"></div>
+  <p><button class="btn" id="print" type="button">Print checklist</button></p>
+  </div>
+
+
+</div>
+<script>
+
+// Editorial weight estimates in pounds (rough, rounded). per: p=person, b=bag, h=per 2 people, q=per 4 people, pd=person-day, pet=pet, petd=pet-day
+// b: R = matches an item on the Ready.gov kit pages, E = editorial add
+const ITEMS=[
+ ["Water & purification","Water filter or purifier",0.2,"h",["72","wk","home"],"","E"],
+ ["Water & purification","Backup purification tablets",0.1,"b",["72","wk","home"],"","E"],
+ ["Water & purification","Collapsible water container",0.3,"h",["72","wk"],"","E"],
+ ["Food","Food, about 1.25 lb per person per day (mix of bars and meals)",1.25,"pd",["72","wk","home"],"","R"],
+ ["Food","Pet food, about 0.5 lb per pet per day (varies by size)",0.5,"petd",["72","wk","home"],"pets","R"],
+ ["Food","Small stove, fuel and pot",1.5,"h",["72","wk"],"","E"],
+ ["Food","Manual can opener",0.2,"b",["72","wk"],"","R"],
+ ["Light, power & radio","Headlamp or flashlight",0.2,"p",["72","wk","home"],"","R"],
+ ["Light, power & radio","Extra batteries",0.4,"b",["72","wk","home"],"","R"],
+ ["Light, power & radio","Phone charger and backup battery",0.5,"p",["72","wk","home"],"","R"],
+ ["Light, power & radio","Battery or hand-crank radio (with NOAA weather)",0.6,"b",["72","wk"],"","R"],
+ ["Light, power & radio","Whistle",0.05,"p",["72","wk","home"],"","R"],
+ ["Information","Local paper maps",0.2,"b",["72","wk","home"],"","R"],
+ ["Information","Paper and pencil",0.2,"b",["72","wk"],"","R"],
+ ["First aid & health","First aid kit",1.0,"q",["72","wk","home"],"","R"],
+ ["First aid & health","Prescription and over-the-counter medications (supply for the trip)",0.3,"p",["72","wk","home"],"","R"],
+ ["First aid & health","Dust mask (one per person)",0.05,"p",["72","wk","home"],"","R"],
+ ["Sanitation & hygiene","Wipes, garbage bags and ties",0.8,"b",["72","wk","home"],"","R"],
+ ["Sanitation & hygiene","Soap, hand sanitizer, toilet paper",0.5,"b",["72","wk","home"],"","R"],
+ ["Sanitation & hygiene","Personal hygiene items",0.6,"p",["72","wk"],"","R"],
+ ["Shelter & warmth","Emergency blanket",0.1,"p",["72","wk","home"],"","E"],
+ ["Shelter & warmth","Sleeping bag or blanket (temperate)",3,"p",["72","wk"],"temp","R"],
+ ["Shelter & warmth","Light blanket or liner (hot climate)",1.5,"p",["72","wk"],"hot","R"],
+ ["Shelter & warmth","Warm sleeping bag (cold climate)",4.5,"p",["72","wk"],"cold","R"],
+ ["Shelter & warmth","Tarp or lightweight shelter",1.2,"h",["72","wk"],"","E"],
+ ["Shelter & warmth","Plastic sheeting, scissors and duct tape (for sealing a room; skip if you will only walk)",1.5,"b",["72","wk"],"","R"],
+ ["Tools","Multi-tool or pliers/wrench (for shutting off utilities)",0.7,"b",["72","wk","home"],"","R"],
+ ["Tools","Knife",0.3,"b",["72","wk","home"],"","E"],
+ ["Tools","Lighter and waterproof matches",0.1,"b",["72","wk","home"],"","R"],
+ ["Tools","Cord and small roll of tape",0.4,"b",["72","wk","home"],"","E"],
+ ["Documents & cash","Copies of key documents in a waterproof pouch",0.3,"b",["72","wk","home"],"","R"],
+ ["Documents & cash","Cash in small bills",0.1,"b",["72","wk","home"],"","R"],
+ ["Clothing","Spare clothes (temperate)",2,"p",["72","wk"],"temp","R"],
+ ["Clothing","Spare clothes (hot climate)",1.5,"p",["72","wk"],"hot","R"],
+ ["Clothing","Spare clothes plus insulating layer (cold climate)",3.5,"p",["72","wk"],"cold","R"],
+ ["Clothing","Rain shell",1.0,"p",["72","wk","home"],"","E"],
+ ["Clothing","Comfortable walking shoes (to change into)",2.0,"p",["home"],"","E"],
+ ["Clothing","Sun hat and sunscreen",0.5,"p",["72","wk","home"],"hot","E"],
+ ["Clothing","Warm hat, gloves and hand warmers",0.7,"p",["72","wk","home"],"cold","E"],
+ ["Pets","Leash, collar tag, collapsible bowl, waste bags",0.9,"pet",["72","wk","home"],"pets","R"]
+];
+const $=id=>document.getElementById(id);
+const DAYS={"72":3,"wk":7,"home":1};
+function qty(per,P,pets,days){return per==="p"?P:per==="b"?1:per==="h"?Math.ceil(P/2):per==="q"?Math.ceil(P/4):per==="pd"?P*days:per==="pet"?pets:per==="petd"?pets*days:0}
+function build(){
+ const sc=$("sc").value,P=+$("pp").value,cl=$("cl").value,pets=+$("pets").value,full=$("full").checked,days=DAYS[sc];
+ const groups={},order=[];let total=0;
+ function add(g,name,q,w,b,note){if(q<=0)return;(groups[g]||(order.push(g),groups[g]=[])).push({name,q,w,b,note});total+=q*w;}
+ // water lines
+ if(full){add("Water & purification","Water at Ready.gov's 1 gal per person per day for "+days+" day"+(days>1?"s":""),P*days,8.34,"R","about 8.3 lb per gallon");
+  if(pets)add("Water & purification","Pet water, about 0.5 gal per pet per day (typical guidance; large dogs need more)",pets*days,4.17,"E","");}
+ else{add("Water & purification","Drinking water carried, about 2 L per person",P,4.4,"E","about 2.2 lb per liter; relies on filter or tablets for refills");
+  if(cl==="hot")add("Water & purification","Extra water for heat, about 1 L per person",P,2.2,"E","");
+  if(pets)add("Water & purification","Pet water carried, about 1 L per pet",pets,2.2,"E","");}
+ ITEMS.forEach(i=>{const [g,n,w,per,scs,tag,b]=i;if(!scs.includes(sc))return;
+  if(tag==="pets"&&!pets)return;if(tag==="temp"&&cl!=="temperate")return;if(tag==="hot"&&cl!=="hot")return;if(tag==="cold"&&cl!=="cold")return;
+  add(g,n,qty(per,P,pets,days),w,b,"");});
+ let h="";order.forEach(g=>{h+="<h3>"+g+"</h3><ul class='checklist'>";groups[g].forEach(it=>{
+  h+="<li><input type='checkbox' aria-label='Packed: "+it.name.replace(/'/g,"&#39;")+"'><span>"+it.name+(it.q>1?" <span class='qn'>× "+it.q+"</span>":"")+(it.note?" <span class='qn'>("+it.note+")</span>":"")+"</span><span class='b'>"+(it.b==="R"?"Ready.gov list":"Editorial add")+"</span><span class='w'>~"+(it.q*it.w).toFixed(1)+" lb</span></li>";});h+="</ul>";});
+ $("list").innerHTML=h;
+ const kg=total*0.4536,per=total/P;
+ $("total").textContent="About "+total.toFixed(0)+" lb ("+kg.toFixed(0)+" kg)";
+ $("perp").textContent="Roughly "+per.toFixed(0)+" lb per person if you split it evenly. A common hiking rule of thumb is to keep a carried pack to about 20% of body weight or less; adjust for your fitness and terrain.";
+}
+["sc","pp","cl","pets","full"].forEach(id=>$(id).addEventListener("input",build));
+$("print").addEventListener("click",()=>window.print());
+build();
+</script>
+
+<p class="kofi">Free and ad-free. If this site helped you, <a href="https://ko-fi.com/marcustravis" target="_blank" rel="noopener">buy me a coffee →</a></p>
+<!-- TODO Cloudflare Web Analytics: parent will add beacon token after Pages project created -->
+</body>
+</html>

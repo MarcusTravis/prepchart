@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Shelf-Life Rotation Tracker · Prep Chart</title>
+<meta name="description" content="A private rotation tracker for emergency supplies: add items with expiry dates, see what has expired or expires soon. Data stays in your browser; nothing is uploaded.">
+<link rel="canonical" href="https://prepchart.pages.dev/shelf-life">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prep Chart">
+<meta property="og:title" content="Shelf-Life Rotation Tracker · Prep Chart">
+<meta property="og:description" content="A private rotation tracker for emergency supplies: add items with expiry dates, see what has expired or expires soon. Data stays in your browser; nothing is uploaded.">
+<meta property="og:url" content="https://prepchart.pages.dev/shelf-life">
+<meta property="og:image" content="https://prepchart.pages.dev/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shelf-Life Rotation Tracker · Prep Chart">
+<meta name="twitter:description" content="A private rotation tracker for emergency supplies: add items with expiry dates, see what has expired or expires soon. Data stays in your browser; nothing is uploaded.">
+<meta name="twitter:image" content="https://prepchart.pages.dev/og-image.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}*,*::before,*::after{box-sizing:border-box}</style>
+<style>
+:root{--bg:#f5f5f7;--surface:#fff;--fg:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--accent:#0066cc;--accent-soft:#fff;--bar-bg:#e8e8ed;
+ --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",system-ui,"Segoe UI",sans-serif;
+ --body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,"Segoe UI",sans-serif}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.47}
+.wrap{max-width:var(--w,1100px);margin:0 auto;padding-block:32px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.eyebrow{font-size:14px;font-weight:600;color:var(--muted)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,54px);line-height:1.06;margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.back{display:inline-block;margin:16px 0 0 max(16px,env(safe-area-inset-left,0px));font:600 14px var(--body);color:var(--accent);text-decoration:none}
+.back+.back{margin-left:18px}
+.grp{margin-top:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{display:flex;flex-direction:column;gap:6px;padding:16px 18px;background:var(--surface);color:inherit;text-decoration:none;min-width:0}
+.ds{flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
+.chip{cursor:pointer}
+.chip:focus-visible,.th-btn:focus-visible,.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.table-box{overflow-x:auto;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:var(--tw,1300px);font-variant-numeric:tabular-nums;font-size:15px}
+td:first-child{min-width:200px}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+th{position:sticky;top:0;white-space:nowrap}
+.th-btn{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+.th-btn::after{content:"↕";opacity:.4;font-size:11px}
+.th-btn[data-dir="asc"]::after{content:"↑";opacity:1;color:var(--accent)}
+.th-btn[data-dir="desc"]::after{content:"↓";opacity:1;color:var(--accent)}
+.cart{display:block;font-size:18px;line-height:1.2}
+.sub{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.num{white-space:nowrap}
+.wide{min-width:280px;max-width:44ch}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.tag{font-size:12px;font-weight:600;padding:2px 8px}
+.wrap{--w:1000px}</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<a class="back" href="index.html">← All charts</a>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Extras · tracker</span>
+    <h1>Shelf-Life Tracker</h1>
+    <p class="lede">Add what you've stored and when it expires. The list shows what's expired or coming due. Your data stays in this browser (localStorage) and is never sent anywhere.</p>
+    
+  </header>
+<aside class="safety" role="note" id="nostore" hidden><strong>Saving is off</strong>Your browser is blocking local storage (private mode, for example), so the list won't persist after you close this page.</aside>
+<div class="panel"><form id="add" class="form" autocomplete="off">
+   <div class="field"><label for="n">Item</label><input id="n" required maxlength="120" placeholder="e.g. Canned beans"></div>
+   <div class="field"><label for="c">Category</label><select id="c"><option>Water</option><option>Food</option><option>Medicine</option><option>First aid</option><option>Batteries</option><option>Fuel</option><option>Hygiene</option><option>Other</option></select></div>
+   <div class="field"><label for="q">Quantity (optional)</label><input id="q" maxlength="40" placeholder="e.g. 6 cans"></div>
+   <div class="field"><label for="e">Expires</label><input id="e" type="date"></div>
+   <div class="field"><label>&nbsp;</label><button class="btn primary" type="submit">Add item</button></div></form>
+  <div class="field" style="max-width:240px"><label for="win">"Expires soon" means within</label><select id="win"><option value="30">30 days</option><option value="60">60 days</option><option value="90" selected>90 days</option><option value="180">180 days</option></select></div>
+  <div class="result" aria-live="polite"><span class="big" id="sum"></span></div>
+  <div class="table-box"><table style="min-width:640px"><thead><tr><th>Item</th><th>Category</th><th>Qty</th><th>Expires</th><th>Status</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+  <p style="margin-top:16px"><button class="btn" id="exp" type="button">Export JSON</button> <button class="btn" id="clr" type="button">Clear all</button></p>
+  <p class="extra-note">Clearing browser data or switching browsers or devices loses this list. Export a copy if it matters. Labels' dates are guidance; use your judgment and official storage advice (see <a href="water-food.html">water and food</a>).</p></div>
+
+
+</div>
+<script>
+
+const KEY="prepchart.shelf.v1",$=id=>document.getElementById(id);
+let items=[];
+try{items=JSON.parse(localStorage.getItem(KEY)||"[]");if(!Array.isArray(items))items=[]}catch(e){items=[];$("nostore").hidden=false}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(items))}catch(e){$("nostore").hidden=false}}
+const today=()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
+function days(s){const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s||"");if(!m)return null;return Math.round((new Date(+m[1],+m[2]-1,+m[3])-today())/864e5)}
+function el(t,txt,cls){const e=document.createElement(t);if(txt!=null)e.textContent=txt;if(cls)e.className=cls;return e}
+function render(){
+ const win=+$("win").value,tb=$("rows");tb.textContent="";
+ const rows=items.map((it,i)=>({it,i,d:days(it.exp)})).sort((a,b)=>(a.d==null)-(b.d==null)||a.d-b.d);
+ let exp=0,soon=0;
+ rows.forEach(({it,i,d})=>{const tr=el("tr");
+  let st,cls;if(d==null){st="No date";cls="status-ok"}else if(d<0){st="Expired "+(-d)+" day"+(d===-1?"":"s")+" ago";cls="status-bad";exp++}else if(d<=win){st=d===0?"Expires today":"Expires in "+d+" day"+(d===1?"":"s");cls="status-soon";soon++}else{st="OK ("+d+" days)";cls="status-ok"}
+  tr.append(el("td",it.name,"cart"),el("td",it.cat),el("td",it.qty||""),el("td",it.exp||""),el("td",st,cls));
+  const td=el("td"),b=el("button","Remove","btn");b.type="button";b.addEventListener("click",()=>{items.splice(i,1);save();render()});td.append(b);tr.append(td);tb.append(tr)});
+ $("sum").textContent=items.length?exp+" expired · "+soon+" expiring within "+win+" days · "+items.length+" tracked":"Nothing tracked yet.";
+}
+$("add").addEventListener("submit",e=>{e.preventDefault();
+ const name=$("n").value.trim().slice(0,120);if(!name)return;
+ items.push({name,cat:$("c").value,exp:$("e").value,qty:$("q").value.trim().slice(0,40)});save();$("add").reset();render();});
+$("win").addEventListener("input",render);
+$("exp").addEventListener("click",()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(items,null,2)],{type:"application/json"}));a.download="prepchart-shelf-life.json";a.click();URL.revokeObjectURL(a.href)});
+$("clr").addEventListener("click",()=>{if(items.length&&confirm("Remove every item from this browser's list?")){items=[];save();render()}});
+render();
+</script>
+
+<p class="kofi">Free and ad-free. If this site helped you, <a href="https://ko-fi.com/marcustravis" target="_blank" rel="noopener">buy me a coffee →</a></p>
+<!-- TODO Cloudflare Web Analytics: parent will add beacon token after Pages project created -->
+</body>
+</html>

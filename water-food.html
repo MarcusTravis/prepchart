@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Emergency Water &amp; Food: Storage Calculator, Filters and Food Chart · Prep Chart</title>
+<meta name="description" content="How much water to store, a chart of 10 backpacking and emergency water filters, purifiers and chemical treatments, and a chart of 9 emergency food options with calories and shelf life.">
+<link rel="canonical" href="https://prepchart.pages.dev/water-food">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prep Chart">
+<meta property="og:title" content="Emergency Water &amp; Food: Storage Calculator, Filters and Food Chart · Prep Chart">
+<meta property="og:description" content="How much water to store, a chart of 10 backpacking and emergency water filters, purifiers and chemical treatments, and a chart of 9 emergency food options with calories and shelf life.">
+<meta property="og:url" content="https://prepchart.pages.dev/water-food">
+<meta property="og:image" content="https://prepchart.pages.dev/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Emergency Water &amp; Food: Storage Calculator, Filters and Food Chart · Prep Chart">
+<meta name="twitter:description" content="How much water to store, a chart of 10 backpacking and emergency water filters, purifiers and chemical treatments, and a chart of 9 emergency food options with calories and shelf life.">
+<meta name="twitter:image" content="https://prepchart.pages.dev/og-image.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}*,*::before,*::after{box-sizing:border-box}</style>
+<style>
+:root{--bg:#f5f5f7;--surface:#fff;--fg:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--accent:#0066cc;--accent-soft:#fff;--bar-bg:#e8e8ed;
+ --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",system-ui,"Segoe UI",sans-serif;
+ --body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,"Segoe UI",sans-serif}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.47}
+.wrap{max-width:var(--w,1100px);margin:0 auto;padding-block:32px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.eyebrow{font-size:14px;font-weight:600;color:var(--muted)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,54px);line-height:1.06;margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.back{display:inline-block;margin:16px 0 0 max(16px,env(safe-area-inset-left,0px));font:600 14px var(--body);color:var(--accent);text-decoration:none}
+.back+.back{margin-left:18px}
+.grp{margin-top:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{display:flex;flex-direction:column;gap:6px;padding:16px 18px;background:var(--surface);color:inherit;text-decoration:none;min-width:0}
+.ds{flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
+.chip{cursor:pointer}
+.chip:focus-visible,.th-btn:focus-visible,.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.table-box{overflow-x:auto;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:var(--tw,1300px);font-variant-numeric:tabular-nums;font-size:15px}
+td:first-child{min-width:200px}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+th{position:sticky;top:0;white-space:nowrap}
+.th-btn{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+.th-btn::after{content:"↕";opacity:.4;font-size:11px}
+.th-btn[data-dir="asc"]::after{content:"↑";opacity:1;color:var(--accent)}
+.th-btn[data-dir="desc"]::after{content:"↓";opacity:1;color:var(--accent)}
+.cart{display:block;font-size:18px;line-height:1.2}
+.sub{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.num{white-space:nowrap}
+.wide{min-width:280px;max-width:44ch}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.tag{font-size:12px;font-weight:600;padding:2px 8px}
+.wrap{--w:1280px}</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<a class="back" href="index.html">← All charts</a>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Water & food · storage and treatment</span>
+    <h1>Emergency Water &amp; Food</h1>
+    <p class="lede">A water storage calculator, a chart of portable water filters and purifiers, and a chart of food options by type and shelf life. Prices are left blank until checked.</p>
+    <p class="checked">Compiled: <time datetime="2026-11-19">Nov 19, 2026</time> · Prices are blank until each one is verified on a live retail page. · <a href="updates.html">What changed</a></p>
+  </header>
+  <aside class="safety" role="note"><strong>Water safety</strong><ul><li>Filters, purifiers and chemical treatments differ. A <em>filter</em> removes bacteria and protozoa but usually not viruses; a <em>purifier</em> (or filter plus chemical step) is meant to cover viruses too. Check what the maker claims for the specific model.</li><li>None of these remove chemical contamination (fuel, industrial runoff, many floodwater hazards). If you suspect chemicals, don't drink it; find another source.</li><li>Boiling is the fallback in public health guidance: a rolling boil for 1 minute (3 minutes at high elevation), per the CDC. If your utility issues a boil-water advisory, follow it.</li><li>Follow the label on any tablet or drop. Dose, wait time and cold-water adjustments matter. Ask a doctor if you're pregnant, have thyroid issues, or are treating water for infants.</li></ul></aside>
+<section class="panel" id="calc"><h2>Water storage calculator</h2>
+  <p class="extra-note">Ready.gov's guidance is about one gallon per person per day, for drinking and sanitation, for several days. Pet figures below are typical guidance, not an official rule: roughly half a gallon to a gallon a day for a dog, about a quarter gallon for a cat. Hot weather, illness, pregnancy and nursing all raise needs.</p>
+  <div class="form">
+    <div class="field"><label for="w-pp">People</label><input id="w-pp" type="number" min="0" max="20" value="2"></div>
+    <div class="field"><label for="w-dog">Dogs</label><input id="w-dog" type="number" min="0" max="10" value="0"></div>
+    <div class="field"><label for="w-cat">Cats</label><input id="w-cat" type="number" min="0" max="10" value="0"></div>
+    <div class="field"><label for="w-days">Days</label><select id="w-days"><option value="3">3 days</option><option value="7">7 days</option><option value="14" selected>14 days</option><option value="30">30 days</option></select></div>
+  </div>
+  <div class="result" aria-live="polite"><div class="big" id="w-gal"></div><span class="sub" id="w-sub"></span><span class="sub" id="w-break"></span></div>
+  <p class="extra-note">Water weighs about 8.3 pounds per gallon, so plan floor strength and how you'll carry it. Store in food-grade containers away from sunlight and fuels, and replace stored water on the schedule the container or your health department recommends. Sources: <a href="https://www.ready.gov/water" target="_blank" rel="noopener">Ready.gov</a>, <a href="https://www.cdc.gov/water-emergency/" target="_blank" rel="noopener">CDC</a>.</p></section>
+
+  <section class="chart" id="filters"><h2>Water filters, purifiers &amp; treatments</h2>
+    
+    <div class="chips" role="group" aria-label="Filter water treatments">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="filter" aria-pressed="false">Filters</button>
+    <button class="chip" data-f="purifier" aria-pressed="false">Purifiers</button>
+    <button class="chip" data-f="chemical" aria-pressed="false">Chemical</button>
+    <button class="chip" data-f="ultralight" aria-pressed="false">Ultralight</button>
+    <button class="chip" data-f="pump" aria-pressed="false">Pump / press</button>
+    </div>
+    <p class="count" id="filters-count">Showing 10 of 10 water treatments</p>
+    <div class="table-box" style="--tw:1500px">
+      <table>
+        <thead><tr><th><button class="th-btn" data-k="name">Model</button></th><th><button class="th-btn" data-k="brand">Brand</button></th><th><button class="th-btn" data-k="type">Type</button></th><th><button class="th-btn" data-k="claim">Pore / claim</button></th><th><button class="th-btn" data-k="virus">Virus?</button></th><th><button class="th-btn" data-k="oz">Weight</button></th><th><button class="th-btn" data-k="cap">Capacity / life</button></th><th><button class="th-btn" data-k="note">Notes</button></th><th><button class="th-btn" data-k="price">Price</button></th><th>Source</th><th><button class="th-btn" data-k="checked">Checked</button></th></tr></thead>
+        <tbody><tr><td><span class="cart">Sawyer Mini</span><span class="tags"><span class="tag">Filters</span><span class="tag">Ultralight</span></span></td><td>Sawyer</td><td>Filter</td><td class="wide">0.1 micron hollow fiber</td><td>No</td><td><span class="num">2 oz</span></td><td>100,000 gal (maker claim)</td><td class="wide">Screws onto bottles or inline; backflush to clean. Not a virus purifier. Field weight about 2 oz.</td><td><span class="num">$28.99</span></td><td><a href="https://www.sawyer.com/product/mini-water-filtration-system-black" target="_blank" rel="noopener">Sawyer Mini</a></td><td><time datetime="2026-11-19">2026-11-19</time></td></tr><tr><td><span class="cart">Sawyer Squeeze</span><span class="tags"><span class="tag">Filters</span><span class="tag">Ultralight</span></span></td><td>Sawyer</td><td>Filter</td><td class="wide">0.1 micron hollow fiber</td><td>No</td><td><span class="num">3 oz</span></td><td></td><td class="wide">Faster flow than the Mini; capacity claim varies by version, so check the current page. List price $59.99 seen on Sawyer site 2026-11-19.</td><td><span class="num">$59.99</span></td><td><a href="https://www.sawyer.com/" target="_blank" rel="noopener">sawyer.com</a></td><td><time datetime="2026-11-19">2026-11-19</time></td></tr><tr><td><span class="cart">LifeStraw Peak Solo</span><span class="tags"><span class="tag">Filters</span><span class="tag">Ultralight</span></span></td><td>LifeStraw</td><td>Filter</td><td class="wide">0.2 micron hollow fiber</td><td>No</td><td><span class="num">1.7 oz</span></td><td>2,000 L (maker claim)</td><td class="wide">Drink as a straw or screw onto a 28 mm bottle. 1.7 oz; lasts up to 2,000 L per maker. Not a virus purifier.</td><td><span class="num">$29.95</span></td><td><a href="https://lifestraw.com/products/lifestraw-peak-solo" target="_blank" rel="noopener">LifeStraw Peak Solo</a></td><td><time datetime="2026-11-19">2026-11-19</time></td></tr><tr><td><span class="cart">LifeStraw Peak Series Straw</span><span class="tags"><span class="tag">Filters</span><span class="tag">Ultralight</span></span></td><td>LifeStraw</td><td>Filter</td><td class="wide"></td><td>No</td><td></td><td></td><td class="wide">Specs not confirmed in v1; open the maker page for current claims.</td><td><span class="sub">—</span></td><td><a href="https://lifestraw.com/" target="_blank" rel="noopener">lifestraw.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Katadyn BeFree 1.0L</span><span class="tags"><span class="tag">Filters</span><span class="tag">Ultralight</span></span></td><td>Katadyn</td><td>Filter</td><td class="wide">0.1 micron hollow fiber</td><td>No</td><td><span class="num">2.3 oz</span></td><td>1,000 L (maker claim)</td><td class="wide">Collapsible flask with built-in filter; easy to rinse clean.</td><td><span class="sub">—</span></td><td><a href="https://www.katadyn.com/" target="_blank" rel="noopener">katadyn.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Katadyn Pocket</span><span class="tags"><span class="tag">Filters</span><span class="tag">Pump / press</span></span></td><td>Katadyn</td><td>Filter</td><td class="wide">0.2 micron ceramic</td><td>No</td><td><span class="num">22 oz</span></td><td>50,000 L (maker claim)</td><td class="wide">Hand pump, ceramic element you scrub clean. Heavy and long-lived; a base-camp or household pick.</td><td><span class="sub">—</span></td><td><a href="https://www.katadyn.com/" target="_blank" rel="noopener">katadyn.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Potable Aqua tablets</span><span class="tags"><span class="tag">Chemical</span><span class="tag">Ultralight</span></span></td><td>Potable Aqua</td><td>Chemical</td><td class="wide">Iodine tablets; follow the pack's dose</td><td>Yes (label)</td><td></td><td>1 tablet per quart (label)</td><td class="wide">Not reliable against Cryptosporidium; taste and thyroid/pregnancy cautions apply. Formulations differ, so read your pack.</td><td><span class="sub">—</span></td><td><a href="https://www.wisconsinpharmacal.com/" target="_blank" rel="noopener">maker (brand-level)</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Aquamira drops</span><span class="tags"><span class="tag">Chemical</span><span class="tag">Ultralight</span></span></td><td>McNett</td><td>Chemical</td><td class="wide">Two-part chlorine dioxide</td><td>Yes (label)</td><td></td><td></td><td class="wide">Mix, wait, then dose; wait time is longer for Cryptosporidium. Follow the label exactly.</td><td><span class="sub">—</span></td><td><a href="https://www.mcnett.com/" target="_blank" rel="noopener">mcnett.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Grayl GeoPress</span><span class="tags"><span class="tag">Purifiers</span><span class="tag">Pump / press</span></span></td><td>Grayl</td><td>Purifier</td><td class="wide">Press-through cartridge; maker claims virus removal</td><td>Yes (maker claim)</td><td><span class="num">16 oz</span></td><td>250 L cartridge (maker claim)</td><td class="wide">Bottle-style press: fill, push, drink. Replace the cartridge on schedule.</td><td><span class="sub">—</span></td><td><a href="https://grayl.com/" target="_blank" rel="noopener">grayl.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">MSR Guardian</span><span class="tags"><span class="tag">Purifiers</span><span class="tag">Pump / press</span></span></td><td>MSR</td><td>Purifier</td><td class="wide">Hollow fiber pump; maker claims virus removal</td><td>Yes (maker claim)</td><td><span class="num">17 oz</span></td><td>10,000 L (maker claim)</td><td class="wide">Pump purifier built for groups and rough conditions; cleans itself as you pump.</td><td><span class="sub">—</span></td><td><a href="https://www.msrgear.com/" target="_blank" rel="noopener">msrgear.com</a></td><td><span class="sub">—</span></td></tr></tbody>
+      </table>
+    </div>
+    <p class="caption"><strong>Price rule:</strong> Lowest publicly listed MSRP or current list price on the manufacturer's or major US retailer's product page for a new unit. Checked date shown. When no live retail found, leave price blank. Weights and capacity are the maker's own claims as recalled, rounded, and still to be re-checked against live pages. A blank means we weren't sure. A filter is not a virus purifier unless the maker says so; none of these remove chemical contamination.</p>
+  </section>
+
+  <section class="chart" id="food"><h2>Emergency food options</h2>
+    
+    <div class="chips" role="group" aria-label="Filter food options">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="freezedried" aria-pressed="false">Freeze-dried</button>
+    <button class="chip" data-f="ready" aria-pressed="false">Ready to eat</button>
+    <button class="chip" data-f="diy" aria-pressed="false">DIY</button>
+    <button class="chip" data-f="bulk" aria-pressed="false">Bulk</button>
+    <button class="chip" data-f="bag" aria-pressed="false">Bag-friendly</button>
+    </div>
+    <p class="count" id="food-count">Showing 9 of 9 food options</p>
+    <div class="table-box" style="--tw:1400px">
+      <table>
+        <thead><tr><th><button class="th-btn" data-k="name">Option</button></th><th><button class="th-btn" data-k="type">Type</button></th><th><button class="th-btn" data-k="cal">Calories</button></th><th><button class="th-btn" data-k="shelf">Shelf life</button></th><th><button class="th-btn" data-k="cost">Cost per day (estimate)</button></th><th><button class="th-btn" data-k="note">Notes</button></th><th>Source</th><th><button class="th-btn" data-k="checked">Checked</button></th></tr></thead>
+        <tbody><tr><td><span class="cart">Mountain House (pouches / #10 cans)</span><span class="tags"><span class="tag">Freeze-dried</span></span></td><td>Freeze-dried meals</td><td class="wide">Varies by meal; read the label</td><td class="wide">Up to 30 years (maker claim)</td><td></td><td class="wide">Just-add-hot-water; heavy on sodium. Cans are better for a pantry, pouches for a bag.</td><td><a href="https://www.mountainhouse.com/" target="_blank" rel="noopener">mountainhouse.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">ReadyWise (buckets / pouches)</span><span class="tags"><span class="tag">Freeze-dried</span></span></td><td>Freeze-dried / dehydrated</td><td class="wide">Varies by kit; read the label</td><td class="wide">Up to 25 years (maker claim)</td><td></td><td class="wide">Sold as multi-week buckets; compare calories per day, not just serving counts.</td><td><a href="https://www.readywise.com/" target="_blank" rel="noopener">readywise.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Augason Farms (cans / buckets)</span><span class="tags"><span class="tag">Freeze-dried</span><span class="tag">Bulk</span></span></td><td>Dehydrated / freeze-dried</td><td class="wide">Varies by product</td><td class="wide">Up to 25 years on many items (maker claim)</td><td></td><td class="wide">Pantry staples (oats, rice, milk powder, meals); check each product's shelf-life statement.</td><td><a href="https://www.augasonfarms.com/" target="_blank" rel="noopener">augasonfarms.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Commercial MRE</span><span class="tags"><span class="tag">Ready to eat</span></span></td><td>Ready-to-eat meal</td><td class="wide">About 1,250 kcal per military-spec MRE; commercial varies</td><td class="wide">About 3 years at 80°F (military spec); less when warm</td><td></td><td class="wide">No water or fuel needed. Heat shortens life, so keep them cool.</td><td></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Rice + beans (DIY)</span><span class="tags"><span class="tag">DIY</span><span class="tag">Bulk</span></span></td><td>DIY bulk</td><td class="wide">About 1,650 kcal/lb dry white rice; about 1,550 kcal/lb dry beans</td><td class="wide">Years to decades if dry, cool and sealed; beans get tougher with age</td><td></td><td class="wide">Cheapest calories. Needs water, fuel and time to cook.</td><td><a href="https://nchfp.uga.edu/" target="_blank" rel="noopener">NCHFP (storage guidance)</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Canned goods (DIY)</span><span class="tags"><span class="tag">DIY</span><span class="tag">Ready to eat</span></span></td><td>DIY canned</td><td class="wide">Read each label</td><td class="wide">High-acid foods roughly 12–18 months; low-acid foods roughly 2–5 years (USDA)</td><td></td><td class="wide">Edible cold. Heavy; rotate by date. Add a manual can opener.</td><td><a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/shelf-stable-food-safety" target="_blank" rel="noopener">USDA FSIS</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Oats + peanut butter (DIY)</span><span class="tags"><span class="tag">DIY</span></span></td><td>DIY pantry</td><td class="wide">About 1,700 kcal/lb dry rolled oats; about 2,700 kcal/lb peanut butter</td><td class="wide">Check labels; oils in peanut butter go rancid with heat</td><td></td><td class="wide">Calorie-dense and light for the weight; needs only a little water.</td><td></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Peak Refuel</span><span class="tags"><span class="tag">Freeze-dried</span><span class="tag">Bag-friendly</span></span></td><td>Freeze-dried backpacking</td><td class="wide">Varies by meal</td><td class="wide"></td><td></td><td class="wide">Built for the trail; light for a go-bag. Shelf-life claim not confirmed in v1.</td><td><a href="https://peakrefuel.com/" target="_blank" rel="noopener">peakrefuel.com</a></td><td><span class="sub">—</span></td></tr><tr><td><span class="cart">Good To-Go</span><span class="tags"><span class="tag">Freeze-dried</span><span class="tag">Bag-friendly</span></span></td><td>Dehydrated backpacking</td><td class="wide">Varies by meal</td><td class="wide"></td><td></td><td class="wide">Restaurant-style meals in pouches. Shelf-life claim not confirmed in v1.</td><td><a href="https://www.goodto-go.com/" target="_blank" rel="noopener">goodto-go.com</a></td><td><span class="sub">—</span></td></tr></tbody>
+      </table>
+    </div>
+    <p class="caption"><strong>Price rule:</strong> Lowest publicly listed MSRP or current list price on the manufacturer's or major US retailer's product page for a new unit. Checked date shown. When no live retail found, leave price blank. Calories are per label or a typical figure for the raw food. Cost per day is blank until a price is checked; a day is about 2,000 kcal per adult, a common planning figure (check your own needs). Shelf life is the maker's claim; storage heat shortens it.</p>
+  </section>
+
+</div>
+<script>
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function cellHTML(c,d,TL){var v=d[c.k],s=c.sub?d[c.sub]:"",o="";
+ if(c.kind==="name"){o='<span class="cart">'+esc(v)+'</span>';if(s)o+='<span class="sub">'+esc(s)+'</span>';
+  if(d.tags&&d.tags.length)o+='<span class="tags">'+d.tags.map(function(t){return '<span class="tag">'+esc(TL[t]||t)+'</span>'}).join("")+'</span>';}
+ else if(c.kind==="num"){if(v!==""&&v!=null){o='<span class="num">'+esc((c.pre||"")+v+(c.suf||""))+'</span>';if(s)o+='<span class="sub">'+esc(s)+'</span>';}}
+ else if(c.kind==="price"){o=v?'<span class="num">$'+esc(v)+'</span>':'<span class="sub">—</span>';}
+ else if(c.kind==="src"){o=(typeof v==="string"&&v.indexOf("https://")===0)?'<a href="'+esc(v)+'" target="_blank" rel="noopener">'+esc(d.srcLabel||"Source")+'</a>':"";}
+ else if(c.kind==="date"){o=v?'<time datetime="'+esc(v)+'">'+esc(v)+'</time>':'<span class="sub">—</span>';}
+ else{if(v){o=esc(v);if(s)o+='<span class="sub">'+esc(s)+'</span>';}}
+ return '<td'+(c.cls?' class="'+c.cls+'"':'')+'>'+o+'</td>';}
+function rowsHTML(DATA,COLS,TL,filter,sk,dir){
+ var rows=DATA.filter(function(d){return filter==="all"||(d.tags||[]).indexOf(filter)>-1});
+ if(sk){rows=rows.slice().sort(function(a,b){var x=a[sk],y=b[sk],bx=(x===""||x==null),by=(y===""||y==null);if(bx||by)return bx&&by?0:bx?1:-1;
+  var c=typeof x==="string"?x.localeCompare(y):x-y;return dir==="asc"?c:-c});}
+ return {n:rows.length,html:rows.map(function(d){return '<tr>'+COLS.map(function(c){return cellHTML(c,d,TL)}).join("")+'</tr>'}).join("")};}
+function makeChart(id,DATA,COLS,TL,noun){
+ var f="all",sk=null,dir="asc",root=document.getElementById(id);
+ function render(){var r=rowsHTML(DATA,COLS,TL,f,sk,dir);root.querySelector("tbody").innerHTML=r.html;
+  root.querySelector(".count").textContent="Showing "+r.n+" of "+DATA.length+" "+noun;}
+ root.querySelectorAll(".chip").forEach(function(b){b.addEventListener("click",function(){f=b.dataset.f;
+  root.querySelectorAll(".chip").forEach(function(c){c.setAttribute("aria-pressed",c===b)});render();})});
+ root.querySelectorAll(".th-btn").forEach(function(b){b.addEventListener("click",function(){var k=b.dataset.k;
+  dir=(sk===k&&dir==="asc")?"desc":"asc";sk=k;root.querySelectorAll(".th-btn").forEach(function(x){x.removeAttribute("data-dir")});b.dataset.dir=dir;render();})});
+}
+const DATA_filters=[
+ {"price":"28.99","checked":"2026-11-19","name":"Sawyer Mini","brand":"Sawyer","type":"Filter","tags":["filter","ultralight"],"claim":"0.1 micron hollow fiber","virus":"No","oz":2,"cap":"100,000 gal (maker claim)","note":"Screws onto bottles or inline; backflush to clean. Not a virus purifier. Field weight about 2 oz.","src":"https://www.sawyer.com/product/mini-water-filtration-system-black","srcLabel":"Sawyer Mini"},
+ {"price":"59.99","checked":"2026-11-19","name":"Sawyer Squeeze","brand":"Sawyer","type":"Filter","tags":["filter","ultralight"],"claim":"0.1 micron hollow fiber","virus":"No","oz":3,"cap":"","note":"Faster flow than the Mini; capacity claim varies by version, so check the current page. List price $59.99 seen on Sawyer site 2026-11-19.","src":"https://www.sawyer.com/","srcLabel":"sawyer.com"},
+ {"price":"29.95","checked":"2026-11-19","name":"LifeStraw Peak Solo","brand":"LifeStraw","type":"Filter","tags":["filter","ultralight"],"claim":"0.2 micron hollow fiber","virus":"No","oz":1.7,"cap":"2,000 L (maker claim)","note":"Drink as a straw or screw onto a 28 mm bottle. 1.7 oz; lasts up to 2,000 L per maker. Not a virus purifier.","src":"https://lifestraw.com/products/lifestraw-peak-solo","srcLabel":"LifeStraw Peak Solo"},
+ {"price":"","checked":"","name":"LifeStraw Peak Series Straw","brand":"LifeStraw","type":"Filter","tags":["filter","ultralight"],"claim":"","virus":"No","oz":"","cap":"","note":"Specs not confirmed in v1; open the maker page for current claims.","src":"https://lifestraw.com/","srcLabel":"lifestraw.com"},
+ {"price":"","checked":"","name":"Katadyn BeFree 1.0L","brand":"Katadyn","type":"Filter","tags":["filter","ultralight"],"claim":"0.1 micron hollow fiber","virus":"No","oz":2.3,"cap":"1,000 L (maker claim)","note":"Collapsible flask with built-in filter; easy to rinse clean.","src":"https://www.katadyn.com/","srcLabel":"katadyn.com"},
+ {"price":"","checked":"","name":"Katadyn Pocket","brand":"Katadyn","type":"Filter","tags":["filter","pump"],"claim":"0.2 micron ceramic","virus":"No","oz":22,"cap":"50,000 L (maker claim)","note":"Hand pump, ceramic element you scrub clean. Heavy and long-lived; a base-camp or household pick.","src":"https://www.katadyn.com/","srcLabel":"katadyn.com"},
+ {"price":"","checked":"","name":"Potable Aqua tablets","brand":"Potable Aqua","type":"Chemical","tags":["chemical","ultralight"],"claim":"Iodine tablets; follow the pack's dose","virus":"Yes (label)","oz":"","cap":"1 tablet per quart (label)","note":"Not reliable against Cryptosporidium; taste and thyroid/pregnancy cautions apply. Formulations differ, so read your pack.","src":"https://www.wisconsinpharmacal.com/","srcLabel":"maker (brand-level)"},
+ {"price":"","checked":"","name":"Aquamira drops","brand":"McNett","type":"Chemical","tags":["chemical","ultralight"],"claim":"Two-part chlorine dioxide","virus":"Yes (label)","oz":"","cap":"","note":"Mix, wait, then dose; wait time is longer for Cryptosporidium. Follow the label exactly.","src":"https://www.mcnett.com/","srcLabel":"mcnett.com"},
+ {"price":"","checked":"","name":"Grayl GeoPress","brand":"Grayl","type":"Purifier","tags":["purifier","pump"],"claim":"Press-through cartridge; maker claims virus removal","virus":"Yes (maker claim)","oz":16,"cap":"250 L cartridge (maker claim)","note":"Bottle-style press: fill, push, drink. Replace the cartridge on schedule.","src":"https://grayl.com/","srcLabel":"grayl.com"},
+ {"price":"","checked":"","name":"MSR Guardian","brand":"MSR","type":"Purifier","tags":["purifier","pump"],"claim":"Hollow fiber pump; maker claims virus removal","virus":"Yes (maker claim)","oz":17,"cap":"10,000 L (maker claim)","note":"Pump purifier built for groups and rough conditions; cleans itself as you pump.","src":"https://www.msrgear.com/","srcLabel":"msrgear.com"}
+];
+const COLS_filters=[{"k":"name","h":"Model","kind":"name","sk":"name"},{"k":"brand","h":"Brand","kind":"text"},{"k":"type","h":"Type","kind":"text"},{"k":"claim","h":"Pore / claim","kind":"text","cls":"wide"},{"k":"virus","h":"Virus?","kind":"text"},{"k":"oz","h":"Weight","kind":"num","suf":" oz"},{"k":"cap","h":"Capacity / life","kind":"text"},{"k":"note","h":"Notes","kind":"text","cls":"wide"},{"k":"price","h":"Price","kind":"price","sk":"price"},{"k":"src","h":"Source","kind":"src","nosort":true},{"k":"checked","h":"Checked","kind":"date","sk":"checked"}];
+const TL_filters={"filter":"Filters","purifier":"Purifiers","chemical":"Chemical","ultralight":"Ultralight","pump":"Pump / press"};
+const DATA_food=[
+ {"price":"","checked":"","name":"Mountain House (pouches / #10 cans)","type":"Freeze-dried meals","tags":["freezedried"],"cal":"Varies by meal; read the label","shelf":"Up to 30 years (maker claim)","cost":"","note":"Just-add-hot-water; heavy on sodium. Cans are better for a pantry, pouches for a bag.","src":"https://www.mountainhouse.com/","srcLabel":"mountainhouse.com"},
+ {"price":"","checked":"","name":"ReadyWise (buckets / pouches)","type":"Freeze-dried / dehydrated","tags":["freezedried"],"cal":"Varies by kit; read the label","shelf":"Up to 25 years (maker claim)","cost":"","note":"Sold as multi-week buckets; compare calories per day, not just serving counts.","src":"https://www.readywise.com/","srcLabel":"readywise.com"},
+ {"price":"","checked":"","name":"Augason Farms (cans / buckets)","type":"Dehydrated / freeze-dried","tags":["freezedried","bulk"],"cal":"Varies by product","shelf":"Up to 25 years on many items (maker claim)","cost":"","note":"Pantry staples (oats, rice, milk powder, meals); check each product's shelf-life statement.","src":"https://www.augasonfarms.com/","srcLabel":"augasonfarms.com"},
+ {"price":"","checked":"","name":"Commercial MRE","type":"Ready-to-eat meal","tags":["ready"],"cal":"About 1,250 kcal per military-spec MRE; commercial varies","shelf":"About 3 years at 80°F (military spec); less when warm","cost":"","note":"No water or fuel needed. Heat shortens life, so keep them cool.","src":"","srcLabel":""},
+ {"price":"","checked":"","name":"Rice + beans (DIY)","type":"DIY bulk","tags":["diy","bulk"],"cal":"About 1,650 kcal/lb dry white rice; about 1,550 kcal/lb dry beans","shelf":"Years to decades if dry, cool and sealed; beans get tougher with age","cost":"","note":"Cheapest calories. Needs water, fuel and time to cook.","src":"https://nchfp.uga.edu/","srcLabel":"NCHFP (storage guidance)"},
+ {"price":"","checked":"","name":"Canned goods (DIY)","type":"DIY canned","tags":["diy","ready"],"cal":"Read each label","shelf":"High-acid foods roughly 12–18 months; low-acid foods roughly 2–5 years (USDA)","cost":"","note":"Edible cold. Heavy; rotate by date. Add a manual can opener.","src":"https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/shelf-stable-food-safety","srcLabel":"USDA FSIS"},
+ {"price":"","checked":"","name":"Oats + peanut butter (DIY)","type":"DIY pantry","tags":["diy"],"cal":"About 1,700 kcal/lb dry rolled oats; about 2,700 kcal/lb peanut butter","shelf":"Check labels; oils in peanut butter go rancid with heat","cost":"","note":"Calorie-dense and light for the weight; needs only a little water.","src":"","srcLabel":""},
+ {"price":"","checked":"","name":"Peak Refuel","type":"Freeze-dried backpacking","tags":["freezedried","bag"],"cal":"Varies by meal","shelf":"","cost":"","note":"Built for the trail; light for a go-bag. Shelf-life claim not confirmed in v1.","src":"https://peakrefuel.com/","srcLabel":"peakrefuel.com"},
+ {"price":"","checked":"","name":"Good To-Go","type":"Dehydrated backpacking","tags":["freezedried","bag"],"cal":"Varies by meal","shelf":"","cost":"","note":"Restaurant-style meals in pouches. Shelf-life claim not confirmed in v1.","src":"https://www.goodto-go.com/","srcLabel":"goodto-go.com"}
+];
+const COLS_food=[{"k":"name","h":"Option","kind":"name","sk":"name"},{"k":"type","h":"Type","kind":"text"},{"k":"cal","h":"Calories","kind":"text","cls":"wide"},{"k":"shelf","h":"Shelf life","kind":"text","cls":"wide"},{"k":"cost","h":"Cost per day (estimate)","kind":"text"},{"k":"note","h":"Notes","kind":"text","cls":"wide"},{"k":"src","h":"Source","kind":"src","nosort":true},{"k":"checked","h":"Checked","kind":"date","sk":"checked"}];
+const TL_food={"freezedried":"Freeze-dried","ready":"Ready to eat","diy":"DIY","bulk":"Bulk","bag":"Bag-friendly"};
+makeChart("filters",DATA_filters,COLS_filters,TL_filters,"water treatments");
+makeChart("food",DATA_food,COLS_food,TL_food,"food options");
+</script>
+<script>
+
+const $=id=>document.getElementById(id);
+function wcalc(){
+ const P=Math.max(0,Math.min(20,+$("w-pp").value||0)),dogs=Math.max(0,Math.min(10,+$("w-dog").value||0)),cats=Math.max(0,Math.min(10,+$("w-cat").value||0)),d=+$("w-days").value;
+ const ppl=P*d, dlo=dogs*d*0.5, dhi=dogs*d*1, cat=cats*d*0.25;
+ const lo=ppl+dlo+cat, hi=ppl+dhi+cat;
+ const f=x=>(Math.round(x*4)/4).toString();
+ $("w-gal").textContent=(lo===hi?f(lo):f(lo)+" to "+f(hi))+" gallons";
+ $("w-sub").textContent="About "+Math.round(lo*3.785)+(lo===hi?"":" to "+Math.round(hi*3.785))+" liters · about "+Math.round(lo*8.34)+(lo===hi?"":" to "+Math.round(hi*8.34))+" lb of water · "+(lo===hi?Math.ceil(lo):Math.ceil(lo)+" to "+Math.ceil(hi))+" one-gallon jugs";
+ $("w-break").textContent="People: "+ppl+" gal · Dogs: "+(dogs?dlo+(dlo===dhi?"":" to "+dhi)+" gal":"0")+" · Cats: "+cat+" gal";
+}
+["w-pp","w-dog","w-cat","w-days"].forEach(id=>$(id).addEventListener("input",wcalc));wcalc();
+</script>
+<script src="scroll-hint.js"></script>
+<p class="kofi">Free and ad-free. If this site helped you, <a href="https://ko-fi.com/marcustravis" target="_blank" rel="noopener">buy me a coffee →</a></p>
+<!-- TODO Cloudflare Web Analytics: parent will add beacon token after Pages project created -->
+</body>
+</html>
