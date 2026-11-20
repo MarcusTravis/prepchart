@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-19: public URL and analytics
+- Canonical host is https://bugoutchart.pages.dev. Cloudflare Web Analytics added on every page.
+
 ## 2026-11-19: v1
 - Initial site: home hub, bug-out bag list comparison, bag builder, water and food (calculator, 10 treatments, 9 food options), power (4 generators, 7 power stations, 4 solar panels), six gear charts, five hazard guides plus get-home and vehicle kit, shelf-life tracker, prep styles, updates page.
 - Ready.gov kit counts (14 basic, 16 additional) verified live; Red Cross basics counted as 15 from published checklist content.

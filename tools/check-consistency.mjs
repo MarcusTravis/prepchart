@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Basic site checks. Run from anywhere:  node tools/check-consistency.mjs   (Node 18+, no install)
-//  1. every page has canonical, theme.css, ko-fi footer line, analytics placeholder
+//  1. every page has canonical, theme.css, ko-fi footer line, Cloudflare Web Analytics beacon
 //  2. chart pages include the price rule + scroll-hint.js
 //  3. internal links and local asset references resolve
 //  4. every page appears in sitemap.xml (except 404)
@@ -12,7 +12,7 @@ import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const HOST = "https://prepchart.pages.dev";
+const HOST = "https://bugoutchart.pages.dev";
 const PRICE = "Lowest publicly listed MSRP or current list price on the manufacturer's or major US retailer's product page for a new unit. Checked date shown. When no live retail found, leave price blank.";
 const problems = [];
 const bad = (w, m) => problems.push(`${w}: ${m}`);
@@ -28,7 +28,7 @@ for (const f of files) {
   }
   if (!h.includes('href="theme.css"') && !h.includes('href="/theme.css"')) bad(f, "theme.css not linked");
   if (!h.includes('Free and ad-free. If this site helped you, <a href="https://ko-fi.com/marcustravis"')) bad(f, "ko-fi footer line missing");
-  if (!h.includes("<!-- TODO Cloudflare Web Analytics")) bad(f, "analytics placeholder missing");
+  if (!h.includes("static.cloudflareinsights.com/beacon.min.js") || !h.includes("data-cf-beacon")) bad(f, "analytics beacon missing");
   if (/fonts\.googleapis|fonts\.gstatic/.test(h)) bad(f, "external fonts");
   if (/\b(firearm|rifle|pistol|ammunition|handgun)s?\b/i.test(h.replace(/ammochart\.net|Firearms (and|or)[^<]*|Ammo Reference|firearms and ammunition charts[^<]*/gi, ""))) bad(f, "possible firearms wording");
   if (/\b(my employer|side[- ]project|work hours)\b/i.test(h)) bad(f, "banned wording");
