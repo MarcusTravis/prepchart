@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-19: more bug-out bag lists
+- Bug-out bag comparison expanded from 4 lists to 14. Added NYC Emergency Management Go Bag, Texas Ready Disaster Supply Checklist, Washington EMD Grab and Go Kit, CDC Emergency Kit Checklist (pregnant women, infants, and children), Salvation Army disaster preparedness kit, Public Safety Canada emergency kit checklist, UK Be Ready checklist, Australian Red Cross survival kit, CAL FIRE / Ready for Wildfire Go Bag, and The Prepared Level 1 packing list. Item counts counted from each live page (2026-11-19). Weight and cost filled only for The Prepared Level 1, which states both.
+
 ## 2026-11-19: public URL and analytics
 - Canonical host is https://bugoutchart.pages.dev. Cloudflare Web Analytics added on every page.
 
